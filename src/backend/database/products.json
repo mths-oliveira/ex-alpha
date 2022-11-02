@@ -1,0 +1,18 @@
+{
+  "wol": {
+    "enrolmentFee": 0,
+    "monthlyPayment": 144
+  },
+  "multWol": {
+    "enrolmentFee": 0,
+    "monthlyPayment": 30
+  },
+  "live": {
+    "enrolmentFee": 250,
+    "monthlyPayment": 198
+  },
+  "multLive": {
+    "enrolmentFee": 60,
+    "monthlyPayment": 60
+  }
+}

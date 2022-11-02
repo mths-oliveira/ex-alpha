@@ -1,0 +1,24 @@
+{
+  "classes": [
+    {
+      "weekdays": "Segunda e Quarta",
+      "firstClassSchedule": "07:00",
+      "lastClassSchedule": "23:00"
+    },
+    {
+      "weekdays": "Terça e Quinta",
+      "firstClassSchedule": "07:00",
+      "lastClassSchedule": "23:00"
+    },
+    {
+      "weekdays": "Sexta",
+      "firstClassSchedule": "07:00",
+      "lastClassSchedule": "18:00"
+    },
+    {
+      "weekdays": "Sábado",
+      "firstClassSchedule": "08:00",
+      "lastClassSchedule": "16:00"
+    }
+  ]
+}

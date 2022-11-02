@@ -1,0 +1,322 @@
+{
+  "Pacific/Pago_Pago": {
+    "country": "Samoa Americana",
+    "city": "Pago Pago"
+  },
+  "Pacific/Honolulu": {
+    "country": "Havaí",
+    "city": "Honolulu"
+  },
+  "America/Anchorage": {
+    "country": "Estados Unidos",
+    "city": "Anchorage"
+  },
+  "America/Los_Angeles": {
+    "country": "Estados Unidos",
+    "city": "Los Angeles"
+  },
+  "America/Tijuana": {
+    "country": "México",
+    "city": "Tijuana"
+  },
+  "America/Vancouver": {
+    "country": "Canadá",
+    "city": "Vancouver"
+  },
+  "America/Chihuahua": {
+    "country": "México",
+    "city": "Chihuahua"
+  },
+  "America/Denver": {
+    "country": "Estados Unidos",
+    "city": "Denver"
+  },
+  "America/Regina": {
+    "country": "Canadá",
+    "city": "Regina"
+  },
+  "America/Bogota": {
+    "country": "Colômbia",
+    "city": "Bogotá"
+  },
+  "America/Chicago": {
+    "country": "Estados Unidos",
+    "city": "Chicago"
+  },
+  "America/Mexico_City": {
+    "country": "México",
+    "city": "Cidade do México"
+  },
+  "America/Rio_Branco": {
+    "country": "Brasil",
+    "city": "Rio Branco"
+  },
+  "America/Winnipeg": {
+    "country": "Canadá",
+    "city": "Winnipeg"
+  },
+  "America/Barbados": {
+    "country": "Barbados",
+    "city": "Bridgetown"
+  },
+  "America/Manaus": {
+    "country": "Brasil",
+    "city": "Manaus"
+  },
+  "America/Caracas": {
+    "country": "Venezuela",
+    "city": "Caracas"
+  },
+  "America/New_York": {
+    "country": "Estados Unidos",
+    "city": "Nova York"
+  },
+  "America/Toronto": {
+    "country": "Canadá",
+    "city": "Toronto"
+  },
+  "America/Sao_Paulo": {
+    "country": "Brasil",
+    "city": "Brasília"
+  },
+  "America/Argentina/Buenos_Aires": {
+    "country": "Argentina",
+    "city": "Buenos Aires"
+  },
+  "America/Halifax": {
+    "country": "Canadá",
+    "city": "Halifax"
+  },
+  "America/Montevideo": {
+    "country": "Uruguai",
+    "city": "Montevidéu"
+  },
+  "America/Santiago": {
+    "country": "Chile",
+    "city": "Santiago"
+  },
+  "America/St_Johns": {
+    "country": "Canadá",
+    "city": "St. John's"
+  },
+  "America/Noronha": {
+    "country": "Brasil",
+    "city": "Noronha"
+  },
+  "America/Nuuk": {
+    "country": "Groenlândia",
+    "city": "Nuuk"
+  },
+  "Atlantic/Cape_Verde": {
+    "country": "Cabo Verde",
+    "city": "Praia"
+  },
+  "Atlantic/Azores": {
+    "country": "Açores",
+    "city": "Açores"
+  },
+  "Africa/Casablanca": {
+    "country": "Marrocos",
+    "city": "Casablanca"
+  },
+  "Europe/Dublin": {
+    "country": "Irlanda",
+    "city": "Dublin"
+  },
+  "Europe/Lisbon": {
+    "country": "Portugal",
+    "city": "Lisboa"
+  },
+  "Europe/London": {
+    "country": "Reino Unido",
+    "city": "Londres"
+  },
+  "Europe/Amsterdam": {
+    "country": "Holanda",
+    "city": "Amsterdam"
+  },
+  "Europe/Belgrade": {
+    "country": "Sérvia",
+    "city": "Belgrado"
+  },
+  "Europe/Berlin": {
+    "country": "Alemanha",
+    "city": "Berlim"
+  },
+  "Europe/Brussels": {
+    "country": "Bélgica",
+    "city": "Bruxelas"
+  },
+  "Africa/Cairo": {
+    "country": "Egito",
+    "city": "Cairo"
+  },
+  "Europe/Copenhagen": {
+    "country": "Dinamarca",
+    "city": "Copenhage"
+  },
+  "Europe/Stockholm": {
+    "country": "Suécia",
+    "city": "Estocolmo"
+  },
+  "Europe/Luxembourg": {
+    "country": "Luxemburgo",
+    "city": "Luxemburgo"
+  },
+  "Europe/Madrid": {
+    "country": "Espanha",
+    "city": "Madrid"
+  },
+  "Europe/Oslo": {
+    "country": "Noruega",
+    "city": "Oslo"
+  },
+  "Europe/Paris": {
+    "country": "França",
+    "city": "Paris"
+  },
+  "Europe/Rome": {
+    "country": "Itália",
+    "city": "Roma"
+  },
+  "Europe/Vienna": {
+    "country": "Áustria",
+    "city": "Viena"
+  },
+  "Europe/Zurich": {
+    "country": "Suíça",
+    "city": "Zurich"
+  },
+  "Europe/Athens": {
+    "country": "Grécia",
+    "city": "Atenas"
+  },
+  "Asia/Beirut": {
+    "country": "Líbano",
+    "city": "Beirute"
+  },
+  "Europe/Bucharest": {
+    "country": "Romênia",
+    "city": "Bucareste"
+  },
+  "Europe/Helsinki": {
+    "country": "Finlândia",
+    "city": "Helsinki"
+  },
+  "Europe/Istanbul": {
+    "country": "Turquia",
+    "city": "Istambul"
+  },
+  "Asia/Jerusalem": {
+    "country": "Israel",
+    "city": "Jerusalém"
+  },
+  "Europe/Kiev": {
+    "country": "Ucrânia",
+    "city": "Kiev"
+  },
+  "Europe/Minsk": {
+    "country": "Bielorrússia",
+    "city": "Minsk"
+  },
+  "Europe/Moscow": {
+    "country": "Rússia",
+    "city": "Moscou"
+  },
+  "Asia/Tehran": {
+    "country": "Irã",
+    "city": "Teerã"
+  },
+  "Asia/Baku": {
+    "country": "Azerbaijão",
+    "city": "Baku"
+  },
+  "Asia/Dubai": {
+    "country": "Emirados Árabes Unidos",
+    "city": "Dubai"
+  },
+  "Asia/Kabul": {
+    "country": "Afeganistão",
+    "city": "Kabul"
+  },
+  "Asia/Ashgabat": {
+    "country": "Turquemenistão",
+    "city": "Asgabate"
+  },
+  "Asia/Dushanbe": {
+    "country": "Tajiquistão",
+    "city": "Dushanbe"
+  },
+  "Asia/Tashkent": {
+    "country": "Uzbequistão",
+    "city": "Tashkent"
+  },
+  "Asia/Kolkata": {
+    "country": "India",
+    "city": "Kolkata"
+  },
+  "Asia/Kathmandu": {
+    "country": "Nepal",
+    "city": "Catmandu"
+  },
+  "Asia/Almaty": {
+    "country": "Cazaquistão",
+    "city": "Almaty"
+  },
+  "Asia/Bishkek": {
+    "country": "Quirguistão",
+    "city": "Bishkek"
+  },
+  "Asia/Yangon": {
+    "country": "Myanmar",
+    "city": "Yangon"
+  },
+  "Asia/Bangkok": {
+    "country": "Tailândia",
+    "city": "Bangkok"
+  },
+  "Asia/Hong_Kong": {
+    "country": "China",
+    "city": "Hong Kong"
+  },
+  "Australia/Perth": {
+    "country": "Austrália",
+    "city": "Perth"
+  },
+  "Asia/Seoul": {
+    "country": "Coreia do Sul",
+    "city": "Seul"
+  },
+  "Asia/Tokyo": {
+    "country": "Japão",
+    "city": "Tokyo"
+  },
+  "Australia/Darwin": {
+    "country": "Austrália",
+    "city": "Darwin"
+  },
+  "Australia/Brisbane": {
+    "country": "Austrália",
+    "city": "Brisbane"
+  },
+  "Australia/Adelaide": {
+    "country": "Austrália",
+    "city": "Adelaide"
+  },
+  "Australia/Sydney": {
+    "country": "Austrália",
+    "city": "Sydney"
+  },
+  "Pacific/Fiji": {
+    "country": "Fiji",
+    "city": "Fiji"
+  },
+  "Pacific/Auckland": {
+    "country": "Nova Zelândia",
+    "city": "Auckland"
+  },
+  "Pacific/Tongatapu": {
+    "country": "Tonga",
+    "city": "Tongatapu"
+  }
+}
