@@ -16,7 +16,7 @@ export const theme = extendTheme({
         _dark: "#202124",
       },
       secondary: {
-        default: "rgba(0,0,0,0.1)",
+        default: "#f0f0f0",
         _dark: "rgba(255,255,255,0.1)",
       },
       tertiary: {

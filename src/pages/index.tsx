@@ -61,7 +61,7 @@ function Card({ title, children }: CardProps) {
       height={["10rem", "12.5rem"]}
       border="sm"
       borderColor="tertiary"
-      width={["15rem", "22.5rem"]}
+      width={["15rem", "100%"]}
     >
       <Text color="altText">{title}</Text>
       <Text fontSize={["1.25rem", "1.5rem"]} alignSelf="end">
@@ -84,6 +84,17 @@ const sales: Record<SalesName, ProductName[]> = {
   "Wol + Live": ["wol", "live"],
   "Mult Wol + Live": ["wol", "multWol", "live"],
   Strike: ["wol", "multWol", "live", "multLive"],
+}
+
+function getCurrencyName(currency: string) {
+  const currencyName = Number(2)
+    .toLocaleString("pt-BR", {
+      currency,
+      style: "currency",
+      currencyDisplay: "name",
+    })
+    .replace("2,00", "")
+  return currencyName
 }
 
 const productsController = new ProductsController()
@@ -124,6 +135,7 @@ export default function ({ initialCurrency }: Props) {
           justifyContent="space-between"
           position="sticky"
           top="0"
+          zIndex="10"
           bg="primary"
           paddingX={["0.25rem", "0"]}
         >
@@ -195,6 +207,7 @@ export default function ({ initialCurrency }: Props) {
               columns={3}
               gridGap={["1rem", "1.5rem"]}
               flexShrink="0"
+              flexGrow="1"
               paddingX={["1rem", "0"]}
             >
               {payments.map(({ month, value }) => (
@@ -255,10 +268,14 @@ export default function ({ initialCurrency }: Props) {
                 },
                 "&>*>tr>*": {
                   borderColor: "tertiary",
+                  whiteSpace: "nowrap",
                 },
               }}
             >
-              <TableCaption>Imperial to metric conversion factors</TableCaption>
+              <TableCaption>
+                Valor da Taxa de Matrícula e Mensalidades em{" "}
+                {getCurrencyName(currency.code)}
+              </TableCaption>
               <Thead>
                 <Tr>
                   <Th>Nome</Th>
@@ -270,21 +287,11 @@ export default function ({ initialCurrency }: Props) {
                 {products.map(({ name, monthlyPayment, enrolmentFee }) => (
                   <Tr key={name}>
                     <Td width="100%">{name}</Td>
-                    <Td>
-                      <Flex justifyContent="space-between">
-                        <Text as="span">{currency.symbol}</Text>{" "}
-                        <Text marginLeft="0.25rem">
-                          {currencyMask(enrolmentFee / currency.value)}
-                        </Text>
-                      </Flex>
+                    <Td isNumeric>
+                      {currencyMask(enrolmentFee / currency.value)}
                     </Td>
-                    <Td>
-                      <Flex justifyContent="space-between">
-                        <Text as="span">{currency.symbol}</Text>{" "}
-                        <Text marginLeft="0.25rem">
-                          {currencyMask(monthlyPayment / currency.value)}
-                        </Text>
-                      </Flex>
+                    <Td isNumeric>
+                      {currencyMask(monthlyPayment / currency.value)}
                     </Td>
                   </Tr>
                 ))}
