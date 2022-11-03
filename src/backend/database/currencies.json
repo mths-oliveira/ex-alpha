@@ -106,11 +106,7 @@
     "symbol": "د.إ",
     "countries": ["Emirados Árabes Unidos"]
   },
-  "STD": {
-    "name": "Dobra São Tomé/Príncipe",
-    "symbol": "$",
-    "countries": ["São Tomé e Príncipe"]
-  },
+
   "VND": { "name": "Dong Vietnamita", "symbol": "₫", "countries": ["Vietnam"] },
   "AMD": { "name": "Dram Armênio", "symbol": "Դ", "countries": ["Arménia"] },
   "USD": {
