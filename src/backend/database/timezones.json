@@ -31,6 +31,10 @@
     "country": "Estados Unidos",
     "city": "Denver"
   },
+  "America/Edmonton": {
+    "country": "Canadá",
+    "city": "Edmonton"
+  },
   "America/Regina": {
     "country": "Canadá",
     "city": "Regina"

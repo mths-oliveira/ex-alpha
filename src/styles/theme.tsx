@@ -4,11 +4,11 @@ export const theme = extendTheme({
   semanticTokens: {
     colors: {
       text: {
-        default: "#202124",
+        default: "#000",
         _dark: "#FFF",
       },
       altText: {
-        default: "#565857",
+        default: "#606060",
         _dark: "#AAA",
       },
       primary: {
@@ -16,7 +16,7 @@ export const theme = extendTheme({
         _dark: "#202124",
       },
       secondary: {
-        default: "#f0f0f0",
+        default: "#EEE",
         _dark: "rgba(255,255,255,0.1)",
       },
       tertiary: {
@@ -24,6 +24,9 @@ export const theme = extendTheme({
         _dark: "rgba(255,255,255,0.1)",
       },
     },
+  },
+  colors: {
+    blue: "#0e72ed",
   },
   fonts: {
     heading: `'Montserrat', sans-serif`,
@@ -40,6 +43,12 @@ export const theme = extendTheme({
   },
   styles: {
     global: {
+      ".justify-text": {
+        whiteSpace: "nowrap",
+        textAlignLast: "justify",
+        width: "fit-content",
+        marginLeft: "auto",
+      },
       "html, body": {
         color: "text",
         bg: "primary",

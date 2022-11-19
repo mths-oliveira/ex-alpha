@@ -1,24 +1,54 @@
 {
-  "classes": [
-    {
-      "weekdays": "Segunda e Quarta",
-      "firstClassSchedule": "07:00",
-      "lastClassSchedule": "23:00"
-    },
-    {
-      "weekdays": "Terça e Quinta",
-      "firstClassSchedule": "07:00",
-      "lastClassSchedule": "23:00"
-    },
-    {
-      "weekdays": "Sexta",
-      "firstClassSchedule": "07:00",
-      "lastClassSchedule": "18:00"
-    },
-    {
-      "weekdays": "Sábado",
-      "firstClassSchedule": "08:00",
-      "lastClassSchedule": "16:00"
-    }
-  ]
+  "segunda_e_quarta": {
+    "weekdays": ["Segunda", "Quarta"],
+    "hours": [
+      "07:00",
+      "08:00",
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00",
+      "13:00",
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00",
+      "18:00",
+      "19:00",
+      "20:00",
+      "21:00",
+      "22:00",
+      "23:00"
+    ]
+  },
+  "terca_e_quinta": {
+    "weekdays": ["Terça", "Quinta"],
+    "hours": [
+      "07:00",
+      "08:00",
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00",
+      "13:00",
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00",
+      "18:00",
+      "19:00",
+      "20:00",
+      "21:00",
+      "22:00",
+      "23:00"
+    ]
+  },
+  "sexta": {
+    "weekdays": ["Sexta"],
+    "hours": ["07:00", "09:00", "11:00", "14:00", "16:00", "18:00"]
+  },
+  "sabado": {
+    "weekdays": ["Sábado"],
+    "hours": ["08:00", "10:00", "12:00", "14:00", "16:00"]
+  }
 }

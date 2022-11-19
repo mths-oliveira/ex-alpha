@@ -13,11 +13,12 @@ export async function getCurrencyQuote(
     return bid
   }
   let url = `${dollarCode}-${outputCurrencyCode}`
-  if (inputCurrencyCode !== dollarCode)
+  if (inputCurrencyCode !== dollarCode) {
     url += `,${dollarCode}-${inputCurrencyCode}`
+  }
   const response = await api.get(url)
   const bid = Number(response.data[`${dollarCode}${outputCurrencyCode}`].bid)
   if (inputCurrencyCode === dollarCode) return bid
-  const ask = Number(response.data[`${dollarCode}${inputCurrencyCode}`].ask)
-  return Number((bid / ask).toFixed(4))
+  const ask = Number(response.data[`${dollarCode}${inputCurrencyCode}`].bid)
+  return bid / ask
 }

@@ -1,27 +1,36 @@
 import products from "../database/products.json"
 
-interface Payment {
-  month: string
+export type ProductId = "wol" | "multWol" | "live" | "multLive"
+type ProductName = "Wol" | "Wol Mult" | "Live" | "Live Mult"
+export interface Product extends Record<PaymentId, number> {
+  name: ProductName
+}
+type PaymentId = "enrolmentFee" | "monthlyPayment"
+type PaymentName = "Matrícula" | "Mensalidade"
+export interface Payment {
+  name: PaymentName
+  productName: ProductName
   value: number
 }
-
-interface Product {
-  name: string
-  enrolmentFee?: number
-  monthlyPayment: number
+type MonthName =
+  | "Janeiro"
+  | "Fevereiro"
+  | "Março"
+  | "Abril"
+  | "Maio"
+  | "Junho"
+  | "Julho"
+  | "Agosto"
+  | "Setembro"
+  | "Outubro"
+  | "Novembro"
+  | "Dezembro"
+export interface MonthlyPayments {
+  month: MonthName
+  payments: Payment[]
 }
 
-export type ProductName = "wol" | "multWol" | "live" | "multLive"
-
-const productName: Record<ProductName, string> = {
-  wol: "Wol",
-  multWol: "Mult Wol",
-  live: "Live",
-  multLive: "Mult Live",
-}
-
-const date = new Date()
-const months = [
+const months: MonthName[] = [
   "Janeiro",
   "Fevereiro",
   "Março",
@@ -36,41 +45,70 @@ const months = [
   "Dezembro",
 ]
 
+const productNamesDictnary: Record<ProductId, ProductName> = {
+  wol: "Wol",
+  multWol: "Wol Mult",
+  live: "Live",
+  multLive: "Live Mult",
+}
+
 export class ProductsController {
-  findAll(): Product[] {
-    return Object.keys(products).map(this.findByName)
+  constructor(private value = 1) {}
+  getAllProducts(): Product[] {
+    return Object.keys(products).map(this.getProductById)
   }
-  findByName(id: ProductName): Product {
-    const { enrolmentFee, monthlyPayment } = products[id]
-    const name = productName[id]
+  getProductById = (productId: ProductId): Product => {
+    const { enrolmentFee, monthlyPayment } = products[productId]
+    const name = productNamesDictnary[productId]
     return {
       name,
-      monthlyPayment,
-      enrolmentFee,
+      enrolmentFee: enrolmentFee / this.value,
+      monthlyPayment: monthlyPayment / this.value,
     }
   }
-  findPayments(productNames: ProductName[]): Payment[] {
-    const payments = Array(3)
-      .fill(0)
-      .map<Payment>((_, i) => {
-        let monthIndex = date.getMonth() + i
-        if (monthIndex > 11) monthIndex -= 12
-        return {
-          month: months[monthIndex],
-          value: 0,
-        }
-      })
-    for (const name of productNames) {
-      const { enrolmentFee, monthlyPayment } = products[name]
-      if (enrolmentFee) {
-        payments[0].value += enrolmentFee
-        payments[2].value += monthlyPayment
-      } else {
-        for (const i in payments) {
-          payments[i].value += monthlyPayment
-        }
+  createMonthlyPaymentsByProducts(products: Product[]): MonthlyPayments[] {
+    const date = new Date()
+    const monthIndex = date.getMonth()
+    const monthlyPayments: MonthlyPayments[] = []
+    for (let i = 0; i < 3; i++) {
+      let currentMonthIndex = monthIndex + i
+      if (currentMonthIndex >= months.length) currentMonthIndex -= months.length
+      monthlyPayments[i] = {
+        month: months[currentMonthIndex],
+        payments: [],
       }
     }
-    return payments
+    for (const product of products) {
+      const { enrolmentFee, monthlyPayment } =
+        this.getPaymentsByProduct(product)
+      if (enrolmentFee) {
+        monthlyPayments[0].payments.push(enrolmentFee)
+        monthlyPayments[2].payments.push(monthlyPayment)
+      } else {
+        monthlyPayments.forEach((_, i) => {
+          monthlyPayments[i].payments.push(monthlyPayment)
+        })
+      }
+    }
+    return monthlyPayments
+  }
+  getPaymentsByProduct(product: Product): Record<PaymentId, Payment> {
+    const monthlyPayment: Payment = {
+      name: "Mensalidade",
+      productName: product.name,
+      value: product.monthlyPayment,
+    }
+    let enrolmentFee: Payment
+    if (product.enrolmentFee) {
+      enrolmentFee = {
+        name: "Matrícula",
+        productName: product.name,
+        value: product.enrolmentFee,
+      }
+    }
+    return {
+      enrolmentFee,
+      monthlyPayment,
+    }
   }
 }
