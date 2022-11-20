@@ -287,7 +287,6 @@ export default function ({ initialCurrency }: Props) {
         </Stack>
       </Stack>
       <Modal
-        height={["100vh", "fit-content"]}
         isOpen={isOpen}
         onClose={() => {
           setIsOpen(false)
@@ -302,7 +301,11 @@ export default function ({ initialCurrency }: Props) {
             setIsOpen(false)
           }}
         />
-        <Flex flexDir="column" bg="primary" padding="3.5rem 2.25rem">
+        <Flex
+          flexDir="column"
+          bg="primary"
+          padding={["3.5rem 1rem", "3.5rem 2.25rem"]}
+        >
           <Flex justifyContent="center" marginBottom="3.5rem">
             <Icon as={MdOutlineMonetizationOn} fontSize="3.5rem" />
           </Flex>
